@@ -1,0 +1,25 @@
+<!-- ye olde view
+
+<h1><%= @name %>'s Guess: <%= @guess %></h1> <br>
+<h1>==============================================</h1>
+<h1><%= p @hilo %></h1>
+<h1>==============================================</h1>
+<h1>Number of guesses: <%= cookies[:tries] %></h1>
+<h1>Remove me later, but: <%= cookies[:secretnum].to_i %>
+
+fancy new view /w forms -->
+
+<h1>The High/Low Game</h1><br>
+<form action="game" method="try">
+    <input type="number" name="guess" placeholder="Enter a number."/>
+    <input type="submit" value="Guess"/>
+</form>
+
+<p><%= p @hilo %></p>
+<p>Number of attempts: <%= p cookies[:tries] %></p>
+<!-- <%= p cookies[:secretnum] %> -->
+<br>
+<br>
+<form action="game" method="new_game">
+    <input type="submit" value="Reset Game"/>
+</form>
